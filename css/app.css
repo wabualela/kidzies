@@ -1,0 +1,104 @@
+:root {
+    --red: #f53b57;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s ease-out;
+}
+
+*::selection {
+    background: var(--red);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../images/header-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    z-index: 10000;
+    padding: 1.5rem 7%;
+    padding-bottom: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+header .logo i {
+    padding-right: 0.5rem;
+    color: var(--red);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #333;
+}
+
+header .navbar a:hover {
+    color: var(--red);
+}
+
+#menu-bars {
+    font-size: 3rem;
+    border: .1rem solid #333;
+    color: #333;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    display: none;
+}
+
+/* Breakpoints */
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1.5rem 3%;
+        padding-bottom: 6rem;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        right: 0;
+        height: calc(100vh - 70%);
+        border-top: .2rem solid #333;
+        border-image: url(../images/card-bg1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
