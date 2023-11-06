@@ -25,6 +25,36 @@ html {
     scroll-behavior: smooth;
 }
 
+main,
+section {
+    min-height: 100vh;
+    padding: 0 7%;
+    padding-top: 11rem;
+    padding-bottom: 9rem;
+}
+
+.background {
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 3rem;
+    border-radius: 5rem;
+    background-color: var(--red);
+    color: #fff;
+    font-size: 1.7rem;
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .1);
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -62,6 +92,33 @@ header .navbar a:hover {
     color: var(--red);
 }
 
+.home {
+    display: flex;
+    align-items: center;
+}
+
+.home .content h1 {
+    font-size: 5rem;
+    color: var(--red);
+}
+
+.home .content h3 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.home .content p {
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.home .image img {
+    width: 36vw;
+    position: relative;
+    top: -9rem;
+}
+
 #menu-bars {
     font-size: 3rem;
     border: .1rem solid #333;
@@ -81,6 +138,13 @@ header .navbar a:hover {
     header {
         padding: 1.5rem 3%;
         padding-bottom: 6rem;
+    }
+
+    main,
+    section {
+        padding: 0 3%;
+        padding-top: 11rem;
+        padding-bottom: 9rem;
     }
 }
 
@@ -113,10 +177,29 @@ header .navbar a:hover {
         display: block;
         text-align: center;
     }
-}
 
-@media (max-width:450px) {
-    html {
-        font-size: 50%;
+    .home .image img {
+        display: none;
     }
-}
+
+    .home .content {
+        text-align: center;
+    }
+
+    .home .content h1 {
+        font-size: 3.5rem;
+    }
+
+    .home .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home .content p {
+        font-size: 1.5rem;
+    }
+
+    @media (max-width:450px) {
+        html {
+            font-size: 50%;
+        }
+    }
