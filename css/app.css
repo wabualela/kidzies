@@ -195,6 +195,28 @@ header .navbar a:hover {
     text-align: right;
 }
 
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .image img {
+    width: 45vm;
+}
+
+.about .content h3 {
+    font-size: 4rem;
+    color: var(--red);
+}
+
+.about .content p {
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+
 /* Breakpoints */
 @media (max-width:1200px) {
     html {
@@ -282,6 +304,14 @@ header .navbar a:hover {
 
     .features .box-container .box .info p {
         font-size: 1.5rem;
+    }
+
+    .about .image img {
+        display: none;
+    }
+
+    .about .content {
+        text-align: center;
     }
 }
 
